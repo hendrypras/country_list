@@ -1,0 +1,105 @@
+@import '../../style/media-screen.scss';
+
+.card__wrapper {
+  margin-top: 47px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: 30px;
+  row-gap: 30px;
+  justify-content: center;
+}
+.header__home {
+  margin-top: 47px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 56px;
+  @include apply-sm-size {
+    height: 40px;
+  }
+  .search__wrapper {
+    border-radius: 3px;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.15);
+    padding: 17px 30px;
+    display: flex;
+    gap: 24px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    width: 480px;
+
+    @include apply-sm-size {
+      padding: 12px;
+      display: flex;
+      gap: 12px;
+    }
+    .icon {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      color: gray;
+    }
+    input {
+      width: 100%;
+      border: none;
+      padding: 0 10px;
+      height: 30px;
+      @include apply-sm-size {
+        height: 26px;
+      }
+    }
+  }
+  .select__wrapper {
+    height: 100%;
+    display: flex;
+    border-radius: 3px;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    align-self: stretch;
+    padding: 16px 12px 16px 24px;
+    select {
+      height: 40px;
+      padding: 0 16px;
+      box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.15);
+      border: none;
+      cursor: pointer;
+      outline: none;
+      @include apply-sm-size {
+        padding: 0 6px;
+      }
+    }
+  }
+}
+
+.nav__paginate {
+  width: 100%;
+  height: max-content;
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  .nav__paginate__wrapper {
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    list-style: none;
+    li > button {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 10px;
+      height: 2rem;
+      width: 2.5rem;
+      background: rgb(243, 240, 240);
+      font-size: 18px;
+      border: 1px solid gray;
+    }
+    li > button.active {
+      background: rgb(154, 152, 152);
+      color: white;
+    }
+  }
+}

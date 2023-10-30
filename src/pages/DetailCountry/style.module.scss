@@ -1,0 +1,103 @@
+@import '../../style/components.scss';
+@import '../../style/media-screen.scss';
+.back__btn {
+  @include button-sh;
+}
+
+.detail__wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  @include apply-sm-size {
+    flex-direction: column;
+  }
+  .img__wrapper img {
+    width: 555px;
+    height: 400px;
+    @include apply-sm-size {
+      width: 351px;
+      height: 268px;
+    }
+  }
+  .content__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    width: max-content;
+    h1 {
+      font-family: 'Roboto', sans-serif;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: normal;
+      text-transform: capitalize;
+    }
+    .content__description__wrapper {
+      width: 100%;
+      display: flex;
+      margin-top: 33px;
+      gap: 50px;
+      justify-content: space-between;
+      @include apply-sm-size {
+        flex-direction: column;
+        gap: 3rem;
+      }
+      .content__desc {
+        display: flex;
+        flex-direction: column;
+        gap: 13px;
+        .content {
+          display: flex;
+          justify-content: start;
+          align-items: center;
+          gap: 5px;
+          font-family: 'Roboto', sans-serif;
+          h4 {
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            text-transform: capitalize;
+          }
+          h5 {
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            text-transform: capitalize;
+          }
+        }
+      }
+    }
+    .border__contries {
+      margin-top: 80px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      h2 {
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: capitalize;
+      }
+      .border {
+        display: inline-flex;
+        padding: 5px 27px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        border-radius: 3px;
+        font-size: 14px;
+        box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.15);
+        @include apply-sm-size {
+          padding: 3px 10px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

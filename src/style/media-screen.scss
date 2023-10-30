@@ -1,0 +1,5 @@
+@mixin apply-sm-size {
+  @media only screen and (max-width: 567px) {
+    @content;
+  }
+}

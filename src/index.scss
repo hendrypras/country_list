@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@300;400;500;600;700&family=Roboto:wght@400;500;700;900&display=swap');
+@import './style/color.scss';
+@import './style/global.style.scss';
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  font-family: 'Red Hat Text', sans-serif;
+}
+a {
+  text-decoration: none;
+}
+.light {
+  background-color: $light-bg-primary;
+  .text {
+    color: $dark-text;
+  }
+}
+
+.dark {
+  background-color: $dark-bg-primary;
+  .text {
+    color: $light-text;
+  }
+}
+.container {
+  @include container;
+  .wrapper__container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 12px;
+    min-height: 100vh;
+  }
+}
